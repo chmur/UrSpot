@@ -1,8 +1,9 @@
 from django.shortcuts import render_to_response
 
-from APPNAME.models import spots
-
+from app1.models import spots
 
 # Create your views here.
 def home(request):
-	return render_to_response('index.html')
+	entries = spots.objects.all()
+
+	return render_to_response('index.html', {'spots' : entries})
