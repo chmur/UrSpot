@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 
 	<head>
 		<meta charset="utf-8" />
@@ -14,12 +14,12 @@
 			<hr />
 			{% for spot in spots %}
 			<div class="spot">
-				<h2>{{ spots.spotname }}</h2>
+				<h2>{{ spot.spotname }}</h2>
 				
-				<p>{{ spots.description }}</p>
-				<h3>{{ spots.link }}</h3>
+				<p>{{ spot.description }}</p>
+				<h3><a href="{{ spot.link }}">GoogleMaps</a></h3>
 
-				<h4>Added on {{ spots.timestamp }} by {{ spots.authorname }}</h4>
+				<h4>Added on {{ spot.timestamp }} by {{ spot.authorname }}</h4>
 			</div>
 			<hr />
 			{% endfor %}
