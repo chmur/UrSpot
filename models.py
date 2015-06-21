@@ -6,5 +6,5 @@ class spots(models.Model):
 	authorname = models.Charfield(max_length = 50)
 	link = models.URLField()
 	description = models.Textfield
-	rating = models.DecimalField(max_value = 5, min_value = 1, max_digits = 1)
+	// rating = models.DecimalField(max_value = 5, min_value = 1, max_digits = 1) 
 	timestamp = models.DateTimeField()
