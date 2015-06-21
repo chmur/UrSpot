@@ -11,12 +11,18 @@
 
 		<div class="container">
 			<h1>URspot</h1>
-			<h2>{{ name }}</h2>
-			
-			<p>{{ description }}</p>
-			<h3>{{ link }}</h3>
+			<hr />
+			{% for spot in entries %}
+			<div class="spot">
+				<h2>{{ spots.spotname }}</h2>
+				
+				<p>{{ spots.description }}</p>
+				<h3>{{ spots.link }}</h3>
 
-			<h4>Added on {{ date }} by {{ author }}</h4>
+				<h4>Added on {{ spots.timestamp }} by {{ spots.authorname }}</h4>
+			</div>
+			<hr />
+			{% endfor %}
 
 		</div>
 
