@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class spots(models.Model):
 
 	spotname = models.CharField(max_length = 50)
