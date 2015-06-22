@@ -4,18 +4,26 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/style.css">
 		<link href="images/favicon.ico" rel="shortcut icon">
-		<title>URspot</title>
+		<title>UrSpot</title>
 	</head>
+	<style>
+
+	body {
+	  font: 14px sans-serif;
+	}
+
+	</style>
 
 	<body>
 
 		<div class="container">
-			<h1>URspot</h1>
+			<h1>UrSpot</h1>
 			<hr />
 			{% for spot in spots %}
 			<div class="spot">
 				<h2>{{ spot.spotname }}</h2>
 				
+				<h3>Tags:  </h3>
 				<p>{{ spot.description }}</p>
 				<h3><a href="{{ spot.link }}">GoogleMaps</a></h3>
 
