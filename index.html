@@ -1,1 +1,101 @@
-pass
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="utf-8" />
+		<style type="text/css">
+
+			body {
+				background-color: #6FAFEF;
+				width: 306px;
+				height: 400px;
+				margin: auto;
+				padding-top: 50px;
+				border: 2px dashed #DDBBDD;
+
+			}
+
+			.everything {
+				font-family: Avenir next;
+				width: 200 px;
+				height: 100 px;
+				display: block;
+				position: fixed;
+			}
+
+			.layout {
+				margin: auto;
+			}
+			
+			#top {
+				height: 50px;
+				width: 300px;
+				border: 3px solid #FFDDFF;
+				border-radius: 7px;
+				background-color: #77BBFF;
+				letter-spacing: 4px;
+				display: block;
+
+			}
+		
+				h1 {
+					font-size: 30px;
+					text-align: center;
+					color: #FFDDFF;
+					position: static;
+					padding-bottom: 20px;
+				}
+
+			#main {
+				position: fixed;
+				margin-top: 20px;
+				width: 300px;
+				height: 150px;
+
+				border: 3px solid #FFDDFF;
+				border-radius: 7px;
+				display: block;
+			}
+				h2 {}
+				h3 {
+					text-align: center;
+				}
+
+			#bottom {
+				position: fixed;
+				margin-top: 180px;
+				width: 300px;
+
+				text-align: center;
+				border: 3px solid #FFDDFF;
+				border-radius: 7px;
+				display:block;
+			}
+
+		</style>
+		<title>UrSpot</title>
+	</head>
+
+	<body>
+
+		<div class="everything">
+
+			<div id="top" class="layout">
+				<h1>UrSpot</h1>
+			</div>
+
+			<div class="layout" id="main">
+				<h2>{{ spot.spotname }}</h2>
+				
+				<p>{{ spot.description }}</p>
+				<h3><a href="{{ spot.link }}">GoogleMaps</a></h3>
+			</div>
+
+			<div id="bottom" class="layout">
+				<h4>Added on {{ spot.timestamp }} by {{ spot.authorname }}</h4>
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
