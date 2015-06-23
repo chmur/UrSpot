@@ -1,0 +1,17 @@
+{% extends "app1/base.html" %}
+	{% block content %}
+		{% for spot in spots %}
+		<div class="spot">
+
+			<h2><a href="{% url "app1.views.spot_detail" pk=spot.pk %}">{{ spot.spotname }}</a></h2>
+				
+			<h3>Tags:  </h3>
+			<p>{{ spot.description|linebreaks }}</p>
+			<h3><a href="{{ spot.link }}">GoogleMaps</a></h3>
+
+			<h4>Added on {{ spot.timestamp }} by {{ spot.authorname }}</h4>
+
+		</div>
+		<hr />
+		{% endfor %}
+	{% endblock content %}
