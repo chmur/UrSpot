@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/style.css">
+		<link href="images/favicon.ico" rel="shortcut icon">
+		<title>UrSpot</title>
+	</head>
+	<style>
+
+	body {
+	  font: 14px sans-serif;
+	}
+
+	</style>
+
+	<body>
+		<div class="page-header">
+			<h1>UrSpot</h1>
+            <a href="{% url "app1.views.spot_new" %}" class="top-menu"><span class="glyphicon glyphicon-plus">Add new spot!</span></a>
+            
+        </div>
+
+		<div class="container">
+			
+			<hr />
+			{% block content %}
+			{% endblock %}
+
+		</div>
+
+	</body>
+
+</html>
