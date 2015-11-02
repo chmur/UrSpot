@@ -1,0 +1,21 @@
+{% extends "app1/base.html" %}
+	{% block content %}
+		{% if spots.timestamp %}
+		<div class="date">
+            {{ spots.timestamp }}
+        </div>
+    	{% endif %}
+		
+
+			<h2>{{ spots.spotname }}</h2>
+				
+			<h3>Tags:  </h3>
+			<p>{{ spots.description }}</p>
+			<h3><a href="{{ spots.link }}">GoogleMaps</a></h3>
+
+			<h4>Added by {{ spots.authorname }}</h4>
+
+		
+		<hr />
+	
+	{% endblock content %}
